@@ -1,0 +1,12 @@
+main
+a.out
+${PROJECT_NAME}
+
+unit_tests*
+*.gcda
+*.gcno
+*.o
+*.a
+
+.idea
+.vscode
