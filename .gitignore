@@ -1,6 +1,6 @@
 main
 a.out
-${PROJECT_NAME}
+my_project
 
 unit_tests*
 *.gcda

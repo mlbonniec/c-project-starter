@@ -11,12 +11,13 @@ CFLAGS		= -Wall -Wextra -I include
 
 LDFLAGS		= -L lib/my -lmy -L lib/my_printf -lmy_printf
 
-SRC_DIR 	=	src/
-SRC			=	$(SRC_DIR)${PROJECT_NAME}.c
+SRC_DIR 	= src/
+
+SRC			= $(SRC_DIR)${PROJECT_NAME}.c
 
 OBJ			= $(SRC:.c=.o)
 
-RM			= rm -f
+RM 			= rm -rf
 
 $(NAME): build_libs $(OBJ)
 	$(CC) -o $(NAME) $(OBJ) $(CFLAGS) $(LDFLAGS)

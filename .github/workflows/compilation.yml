@@ -16,4 +16,4 @@ jobs:
         run: make
 
       - name: Check binary
-        run: ls ${PROJECT_NAME}
+        run: ls my_project
