@@ -1,6 +1,7 @@
 #!/bin/bash
 
 already_setup=false
+organization_name="EpitechPromo2026"
 
 # If no args is passed, exit with an error
 if [ -z "$1" ]; then
@@ -12,7 +13,7 @@ elif $already_setup; then
 fi
 
 # Check if used commands exists
-cmds=(find rename sed rm)
+cmds=(find rename sed rm git)
 for cmd in "${cmds[@]}"
 do
     if ! [ -x "$(command -v $cmd)" ]; then
@@ -29,7 +30,7 @@ if [ -z "$repository" ]; then
     exit 1
 else
     read -p "Validate repository name: $repository (yes/no): " validation
-    # TODO: setup git remote url
+    git remote set-url origin "git@github.com:$organization_name/$repository.git"
     if [ "$validation" == "no" ] || [ "$validation" == "n" ]; then
         echo "Setup aborted."
         exit 1
