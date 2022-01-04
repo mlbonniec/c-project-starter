@@ -5,8 +5,8 @@
 ** ${PROJECT_NAME} header file
 */
 
-#ifndef ${PROJECT_NAME}_H_
-    #define ${PROJECT_NAME}_H_
+#ifndef ${PROJECT_NAME_UPPERCASE}_H_
+    #define ${PROJECT_NAME_UPPERCASE}_H_
 
 
 
