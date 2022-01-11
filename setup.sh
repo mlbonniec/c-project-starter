@@ -46,8 +46,9 @@ find . -type f -exec sed -i "s/\${PROJECT_NAME}/${1,,}/g" {} +
 find . -type f -exec sed -i "s/\${PROJECT_NAME_UPPERCASE}/${1^^}/g" {} +
 sed -i 's/already_setup=false/already_setup=true/g' setup.sh
 
-read -p "Would you delete this setup file? (yes/no): " deletion
+read -p "Would you delete this setup file and the README.md? (yes/no): " deletion
 if [ "$deletion" == "yes" ] || [ "$deletion" == "y" ]; then
-    echo "File deleted."
-    rm setup.sh
+    echo "Files deleted."
+    rm -f `basename "$0"`
+    rm -f README.md
 fi
