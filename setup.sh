@@ -31,6 +31,8 @@ if [ -z "$repository" ]; then
 else
     read -p "Validate repository name: $repository (yes/no): " validation
     git remote set-url origin "git@github.com:$organization_name/$repository.git"
+    rm -f .git/index
+    git reset &> /dev/null
     if [ "$validation" == "no" ] || [ "$validation" == "n" ]; then
         echo "Setup aborted."
         exit 1
