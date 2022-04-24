@@ -2,7 +2,9 @@ name: Check compilation
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - main
 
 jobs:
   compilation:
