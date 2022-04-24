@@ -1,5 +1,5 @@
 ##
-## EPITECH PROJECT, 2021
+## EPITECH PROJECT, 2022
 ## Makefile
 ## File description:
 ## Makefile that build the project
