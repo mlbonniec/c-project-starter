@@ -8,6 +8,6 @@
 #ifndef ${PROJECT_NAME_UPPERCASE}_H_
     #define ${PROJECT_NAME_UPPERCASE}_H_
 
-
+void my_printf(char *str, ...);
 
 #endif
